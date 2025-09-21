@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Voices - Share Your Opinion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">Anonymous Voices</h1>
+            <p class="tagline">Share your thoughts freely, without judgment</p>
+        </header>
+
+        <main class="main-content">
+            <section class="submission-section">
+                <div class="card">
+                    <h2>Share Your Opinion</h2>
+                    <form id="opinion-form" class="opinion-form">
+                        <div class="form-group">
+                            <label for="opinion-text">What's on your mind?</label>
+                            <textarea 
+                                id="opinion-text" 
+                                name="opinion" 
+                                placeholder="Express yourself freely... Your identity remains completely anonymous."
+                                required
+                                maxlength="500"
+                            ></textarea>
+                            <div class="char-counter">
+                                <span id="char-count">0</span>/500 characters
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Category (Optional)</label>
+                            <select id="category" name="category">
+                                <option value="">Select a category...</option>
+                                <option value="life">Life & Personal</option>
+                                <option value="work">Work & Career</option>
+                                <option value="society">Society & Politics</option>
+                                <option value="relationships">Relationships</option>
+                                <option value="technology">Technology</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Share Anonymously</span>
+                            <span class="btn-icon">🗣️</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="opinions-section">
+                <div class="section-header">
+                    <h2>Recent Anonymous Opinions</h2>
+                    <div class="filter-controls">
+                        <select id="category-filter">
+                            <option value="">All Categories</option>
+                            <option value="life">Life & Personal</option>
+                            <option value="work">Work & Career</option>
+                            <option value="society">Society & Politics</option>
+                            <option value="relationships">Relationships</option>
+                            <option value="technology">Technology</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id="opinions-container" class="opinions-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">💭</div>
+                        <p>No opinions shared yet. Be the first to share your thoughts!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="privacy-notice">
+                <h3>🔒 Your Privacy is Protected</h3>
+                <p>We don't collect any personal information. No tracking, no cookies, no data storage beyond your browser.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
